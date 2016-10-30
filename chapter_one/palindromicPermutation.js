@@ -2,6 +2,7 @@
 
 function palindromicPermutation(str) {
   str = str.toLowerCase().replace(" ", "");
+  //create a list of characters and their number of appearances in the string
   let list = {};
   for (let i=0; i<str.length; i++) {
     if (list[str[i]]) {
@@ -10,6 +11,8 @@ function palindromicPermutation(str) {
       list[str[i]] = 1;
     }
   }
+
+  //check for how many odd characters there are => cannot be palindrome with more than one odd appearance
   let numberOfOdds = 0;
   for (let key in list) {
     if (list[key] % 2 !== 0) {
@@ -19,8 +22,3 @@ function palindromicPermutation(str) {
   if (numberOfOdds > 1) return false;
   return true;
 }
-
-console.log(palindromicPermutation('Taco cat'));
-console.log(palindromicPermutation('tacattt'))
-console.log(palindromicPermutation('this is the day'));
-
