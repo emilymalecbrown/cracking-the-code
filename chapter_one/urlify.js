@@ -1,8 +1,6 @@
 // Write a method to replace all spaces in a string with '%20'
 
-
-// if there is are leading or trailing spaces both methods would add %20 at the end
-// can use .trim() to remove this whitespace
+// using trim in all methods to remote leading and trailing whitespace
 
 // using .split.join()
 function urlify(str) {
